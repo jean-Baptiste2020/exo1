@@ -31,13 +31,9 @@ html {
     text-decoration: underline;
   }
   .logo_image {
+    width: 110px;
     float: left;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
+    margin: 0;
   }
   .clearfix:after {
     content: "";
