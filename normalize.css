@@ -1,10 +1,17 @@
 html {
     font-size: 62.5%;
+    height: 100%;
   }
   body {
+    height: 100%;
+  }
+  .container {
     width: 980px;
     margin: 0 auto;
+    position: relative;
+    min-height: 100%;
   }
+  
   ul {
     margin: 0;
     padding: 0;
@@ -17,8 +24,11 @@ html {
     height: 50px;
     font-size: 1.5rem;
   }
-  .top_menu li {
+  ul.top_menu {
     float: right;
+  }
+  .top_menu li {
+    float: left;
     width: auto;
   }
   .top_menu li a {
@@ -35,19 +45,28 @@ html {
     float: left;
     margin: 0;
   }
-  .clearfix:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
   .image_area{
     width: 100%;
     height: 20vh;
+  }
+  .wrapper{
+    margin-top: 10px;
+    padding-bottom: 100px;
+  }
+  .side_menu{
+    width: 300px;
+    float: left;
   }
   .side_menu li{
     background-color: #F5B4B3;
     height: 6rem;
     margin-bottom: 10px;
+  }
+  .side_menu li:hover{
+    opacity: 0.6;
+  }
+  .banner a:hover {
+    opacity: 0.6;
   }
   .side_menu li a{
     font-size:2rem;
@@ -56,9 +75,11 @@ html {
     display: block;
     padding: 2rem;
   }
-  .side_menu{
-    width: 300px;
-    float: left;
+  .banner img{
+    width: 100%;
+  }
+  .banner{
+    margin-top: 20px;
   }
   .content{
     width: 660px;
@@ -66,28 +87,49 @@ html {
     float: left;
     font-size: 1.5rem;
   }
-  .wrapper{
-    margin-top: 10px;
-  }
   .news{
     height: 200px;
     background-color: #FCE8E7;
     padding: 20px;
+    overflow: scroll;
+    line-height: 2;
+  }
+  .banner_content {
+    margin-top: 10px;
+    display: table;
+  }
+  .banner_content p {
+    display: table-cell;
+  }
+  .banner_content p img {
+    width: 100%;
+  }
+  .side_menu .point{
+    background-color: #FCECEC;
+  }
+  .side_menu .point a{
+    color: #4D4D4D;
   }
   .footer{
-    width: 144vh;
+    width: 100%;
     height: 100px;
+    position: absolute;
+    bottom: 0;
     background-color: #4D4D4D;
-    position:absolute;
-    bottom:0;
+    display: table;
   }
   .footer p {
     font-size: 1rem;
     color: #fff;
     text-align: center;
-    padding-top: 50px;
+    vertical-align: middle;
+    display: table-cell;
   }
-
+  .clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
   
 .contenant {
   position: relative;
@@ -127,6 +169,7 @@ td .saisie{
     color: white;
     background-color: #008B8B;
     padding: 10px 10px 10px 10px;
+
 }
 .button:hover{
     opacity: 0.5;
@@ -140,3 +183,9 @@ td .saisie{
     border: 1px solid black;
     padding: 10px;
   }
+
+
+h2{
+  position: fixed;
+  margin-bottom: 5px;
+}
